@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  /* Default / Light Theme */
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --heading-color: #111827;
+  --accent-color: #3b82f6;
+  --code-bg: #f3f4f6;
+  --font-body: ui-sans-serif, system-ui, sans-serif;
+  --font-heading: ui-sans-serif, system-ui, sans-serif;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1f2937;
+  --text-color: #f9fafb;
+  --heading-color: #ffffff;
+  --accent-color: #60a5fa;
+  --code-bg: #111827;
+}
+
+[data-theme='professional'] {
+  --bg-color: #ffffff;
+  --text-color: #374151;
+  --heading-color: #111827;
+  --accent-color: #0f172a;
+  --code-bg: #f3f4f6;
+  --font-body: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+[data-theme='creative'] {
+  --bg-color: #fae8ff;
+  --text-color: #4a044e;
+  --heading-color: #701a75;
+  --accent-color: #d946ef;
+  --code-bg: #f5d0fe;
+  --font-body: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  --font-heading: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide app UI */
+  .app-layout {
+    display: none !important;
+  }
+
+  /* Show Print View */
+  .print-container {
+    display: block !important;
+  }
+
+  .print-page {
+    break-after: page;
+    page-break-after: always;
+  }
+}
